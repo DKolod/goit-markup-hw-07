@@ -7,10 +7,11 @@
   top: 0;
   transition: opacity 250ms, visibility 250ms;
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%);
+.backdrop.is-hidden {
+  .modal {
+    transform: translate(-50%, -50%);
+  }
 }
-
 .modal {
   width: 528px;
   height: 581px;
@@ -40,14 +41,14 @@
   justify-content: center;
 }
 
-.modal-close-icon:hover {
-  fill: var(--accent-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .modal-close-icon {
   width: 18px;
   height: 18px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: var(--accent-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .is-hidden {
@@ -73,21 +74,14 @@
   padding-right: 42px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &:focus + .input-icon {
+    fill: var(--accent-color);
+  }
 }
-.modal-form-input:focus {
-  border-color: var(--accent-color);
-}
-.modal-form-input:focus + .input-icon {
-  fill: var(--accent-color);
-}
-.modal-form-textarea::placeholder {
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  /* padding: 12px 16px; */
-  color: rgba(117, 117, 117, 0.5);
-}
+
 .form-input-text {
   font-style: normal;
   font-weight: normal;
@@ -109,10 +103,19 @@
   outline: none;
   margin-top: 28px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    /* padding: 12px 16px; */
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
-.modal-form-textarea:focus {
-  border-color: var(--accent-color);
-}
+
 .modal-box {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -163,10 +166,13 @@
 .ckeck-icon {
   fill: #ffffff;
 }
-.modal-check:checked + .check-text .check-item {
-  background-color: var(--accent-color);
-  border: none;
+.modal-check:checked + .check-text {
+  .check-item {
+    background-color: var(--accent-color);
+    border: none;
+  }
 }
+
 .modal-check-link {
   font-style: normal;
   font-weight: normal;

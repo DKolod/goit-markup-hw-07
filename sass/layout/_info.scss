@@ -8,10 +8,11 @@
 .info-item {
   margin-right: 30px;
   width: 270px;
+  &:last-child {
+    margin-right: 0px;
+  }
 }
-.info-item:last-child {
-  margin-right: 0px;
-}
+
 .info-title {
   font-weight: bold;
   font-size: 14px;
