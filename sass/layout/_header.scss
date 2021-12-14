@@ -3,10 +3,10 @@
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
-.header-logo {
+.header__logo {
   margin-right: 93px;
 }
-.header-navigation {
+.header__navigation {
   display: flex;
   & > a {
     font-family: "Raleway", sans-serif;
@@ -21,12 +21,12 @@
     }
   }
 }
-.header-list,
+.header__list,
 .header-contacts {
   display: flex;
   margin-left: auto;
 }
-.header-list {
+.header__list {
   align-items: center;
 }
 .main-nav {
@@ -35,11 +35,11 @@
 }
 
 /* Список навигационных ссылок */
-.header-item:not(:last-child) {
+.header__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-link {
+.header__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -53,7 +53,7 @@
     color: var(--accent-color);
     /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   }
-  &.carrent::after {
+  &.header__link--carrent::after {
     content: "";
     width: 100%;
     height: 4px;
@@ -64,11 +64,11 @@
     bottom: -32.3px;
   }
 }
-.carrent {
+.header__link--carrent {
   color: var(--accent-color);
   /* telefon and mail */
 }
-.header-mail {
+.header-contacts__mail {
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -82,7 +82,7 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-.header-tel {
+.header-contacts__tel {
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -103,7 +103,7 @@
   color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-icon {
+.header-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
